@@ -1,0 +1,21 @@
+:root {
+  --blog-primary: purple;
+  --blog-light: lavender;
+  --blog-dark: purple;
+  --blog-darker: black;
+
+  --projects-primary: blue;
+  --projects-light: blue;
+  --projects-dark: blue;
+  --projects-darker: blue;
+
+  --gallery-primary: green;
+  --gallery-light: green;
+  --gallery-dark: green;
+  --gallery-darker: green;
+
+  --about-primary: red;
+  --about-light: red;
+  --about-dark: red;
+  --about-darker: red;
+}
