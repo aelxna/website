@@ -1,21 +1,20 @@
 :root {
-  --blog-primary: purple;
-  --blog-light: lavender;
-  --blog-dark: purple;
-  --blog-darker: black;
+  --about-primary: oklch(0.5844 0.228 8.91);
+  --about-light: oklch(0.8454 0.087 9.26);
+  --about-dark: oklch(0.2883 0.0907 11.59);
 
-  --projects-primary: blue;
-  --projects-light: blue;
-  --projects-dark: blue;
-  --projects-darker: blue;
+  --blog-primary: oklch(0.501 0.1199 292.92);
+  --blog-light: oklch(0.8263 0.0527 300.06);
+  --blog-dark: oklch(0.2519 0.0526 297.3);
 
-  --gallery-primary: green;
-  --gallery-light: green;
-  --gallery-dark: green;
-  --gallery-darker: green;
+  --projects-primary: oklch(0.5322 0.142966 247.917);
+  --projects-light: oklch(0.841 0.0512 260.44);
+  --projects-dark: oklch(0.2672 0.057 256.43);
 
-  --about-primary: red;
-  --about-light: red;
-  --about-dark: red;
-  --about-darker: red;
+  --gallery-primary: oklch(0.6108 0.108 184.29);
+  --gallery-light: oklch(0.878 0.0448 184.06);
+  --gallery-dark: oklch(0.3081 0.0437 183.39);
+
+  --text-black: oklch(0.225 0.009 255.61);
+  --text-white: oklch(0.9811 0.0093 286.93);
 }
