@@ -30,7 +30,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="header">
+<header>
 	<div>
 		aelena.net {page.route.id}
 	</div>
@@ -59,6 +59,6 @@
 			<a href="/about">about</a>
 		{/if}
 	</nav>
-</div>
+</header>
 
 {@render children()}
