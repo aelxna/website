@@ -21,8 +21,8 @@
 		}
 	}
 	
-	onMount(() => updateSection(page.route.id));
-	afterNavigate(() => updateSection(page.route.id));
+	onMount(() => updateSection(page.url.pathname));
+	afterNavigate(() => updateSection(page.url.pathname));
 
 </script>
 
@@ -32,7 +32,7 @@
 
 <header>
 	<div>
-		aelena.net {page.route.id}
+		aelena.net {page.url.pathname}
 	</div>
 	<nav>
 		{#if section === 'blog'}
@@ -62,3 +62,8 @@
 </header>
 
 {@render children()}
+
+<style>
+	@import '/static/themes/prism-xonokai.css';
+
+</style>

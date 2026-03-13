@@ -5,12 +5,12 @@
 </script>
 
 <nav class="path">
-  <a href="/">blog</a> ▶ {filename}
+  <a href="/projects">projects</a> ▶ {filename}
 </nav>
 
 <article>
   <h1>{title}</h1>
-  <p "description">{description}</p>
+  <p class="description">{description}</p>
 
   <slot></slot>
 

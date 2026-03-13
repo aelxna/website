@@ -7,6 +7,7 @@
       "dependencies": {
         "@sveltejs/adapter-static": "^3.0.10",
         "mdsvex": "^0.12.6",
+        "prismjs": "^1.30.0",
       },
       "devDependencies": {
         "@eslint/compat": "^2.0.2",
