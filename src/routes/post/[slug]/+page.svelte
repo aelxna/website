@@ -19,3 +19,9 @@
   <svelte:component this={content} />
 
 </article>
+
+<style>
+  nav.path {
+    font-family: "Berkeley Mono Variable", monospace !important;
+  }
+</style>

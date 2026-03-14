@@ -9,7 +9,7 @@
 </script>
 
 <nav class="path">
-  <a href="/">projects</a> ▶ {filename}.md
+  <a href="/projects">projects</a> ▶ {filename}.md
 </nav>
 
 <article>
@@ -19,3 +19,9 @@
   <svelte:component this={content} />
 
 </article>
+
+<style>
+  .path {
+    font: "Berkeley Mono Variable", monospace;
+  }
+</style>
