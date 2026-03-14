@@ -84,14 +84,3 @@
   font-weight: 700;
   font-style: italic;
 }
-
-:root {
-  code {
-    font-size: 1rem;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-  }
-}

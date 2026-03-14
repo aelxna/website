@@ -29,34 +29,37 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<main>
+<main class={section}>
 <div class="window-container">
 	<div class="window">
 		<header>
-			<div>aelena.net</div>
+			<div style="align-items:center;display:flex">
+				<img src="images/logo.svg" class="logo">
+				aelena.net
+			</div>
 			<nav>
 				{#if section === 'blog'}
 					<strong>blog</strong>
 				{:else}
-					<a href="/">blog</a>
+					<a href="/" id="blog-nav">blog</a>
 				{/if}
 
 				{#if section === 'projects'}
 					<strong>projects</strong>
 				{:else}
-					<a href="/projects">projects</a>
+					<a href="/projects" id="projects-nav">projects</a>
 				{/if}
 
 				{#if section === 'gallery'}
 					<strong>gallery</strong>
 				{:else}
-					<a href="/gallery">gallery</a>
+					<a href="/gallery" id="gallery-nav">gallery</a>
 				{/if}
 
 				{#if section === 'about'}
 					<strong>about</strong>
 				{:else}
-					<a href="/about">about</a>
+					<a href="/about" id="about-nav">about</a>
 				{/if}
 			</nav>
 		</header>
@@ -69,11 +72,38 @@
 </main>
 
 <style>
-	@import '/static/themes/prism-xonokai.css';
-	@import '/static/fonts.css';
+	@import '/static/global.css';
 
 	:root {
 		--footer-height: 2.5rem;
+	}
+
+	.blog {
+		--page-primary: var(--blog-primary);
+		--page-light: var(--blog-light);
+		--page-dark: var(--blog-dark);
+	}
+	.projects {
+		--page-primary: var(--projects-primary);
+		--page-light: var(--projects-light);
+		--page-dark: var(--projects-dark);
+	}
+	.gallery {
+		--page-primary: var(--gallery-primary);
+		--page-light: var(--gallery-light);
+		--page-dark: var(--gallery-dark);
+	}
+	.about {
+		--page-primary: var(--about-primary);
+		--page-light: var(--about-light);
+		--page-dark: var(--about-dark);
+	}
+
+	.logo {
+		height: 1.5rem;
+		padding-right: 0.5rem;
+		display: block;
+		filter: brightness(0) saturate(100%) invert(100%) sepia(63%) saturate(2439%) hue-rotate(180deg) brightness(111%) contrast(105%);
 	}
 
 	main {
@@ -97,26 +127,26 @@
 			inset 3pt 3pt 0pt 0pt #cccccc,
 			inset 4pt 4pt 0pt 0pt #5b5b5b,
 			inset -4pt -4pt 0pt 0pt #ffffff,
-			inset -6pt -6pt 0pt 0pt #8f54d3,
-			inset -6pt 6pt 0pt 0pt #8f54d3,
-			inset 6pt -6pt 0pt 0pt #8f54d3,
-			inset 6pt 6pt 0pt 0pt #8f54d3;
+			inset -6pt -6pt 0pt 0pt var(--page-primary),
+			inset -6pt 6pt 0pt 0pt var(--page-primary),
+			inset 6pt -6pt 0pt 0pt var(--page-primary),
+			inset 6pt 6pt 0pt 0pt var(--page-primary);
 
 		padding: 0.8rem;
 
 		margin-left: auto;
 		margin-right: auto;
 
-		border: 1pt solid black;
+		border: 1pt solid var(--page-dark);
 		border-radius: 4px;
 		max-width: 900px;
 	}
 
 	header {
-		background-color: #8f54d3;
+		background: linear-gradient(90deg, var(--page-primary), var(--page-light));
 		padding: 0.5rem 0.8rem;
 
-		font-size: 20px;
+		font-size: 1.5rem;
 		color: white;
 
 		display: flex;
@@ -124,6 +154,28 @@
 
 		a {
 			color: white;
+			text-decoration: none;
+		}
+		
+		a:hover {
+			text-decoration: underline;
+		}
+
+		nav * {
+			filter: drop-shadow(0 0 0.5rem var(--page-primary));
+		}
+
+		#blog-nav:hover {
+			filter: drop-shadow(0 0 0.5rem var(--blog-primary));
+		}
+		#projects-nav:hover {
+			filter: drop-shadow(0 0 0.5rem var(--projects-primary));
+		}
+		#gallery-nav:hover {
+			filter: drop-shadow(0 0 0.5rem var(--gallery-primary));
+		}
+		#about-nav:hover {
+			filter: drop-shadow(0 0 0.5rem var(--about-primary));
 		}
 	}
 
@@ -135,7 +187,7 @@
 		position: absolute;
 		bottom: 0;
 		min-width: 100%;
-		height: 2.5rem;
+		height: var(--footer-height);
 		background-color:#5b5b5b;
 		margin: 0;
 	}
