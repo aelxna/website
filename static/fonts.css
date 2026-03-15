@@ -8,21 +8,21 @@
 
 @font-face {
   font-family: 'Neue Haas Grotesk Text Pro';
-  src: local('Neue Haas Grotesk Text Pro');
+  src: local('Neue Haas Grotesk Text Pro Bold');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Neue Haas Grotesk Text Pro';
-  src: local('Neue Haas Grotesk Text Pro');
+  src: local('Neue Haas Grotesk Text Pro Italic');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Neue Haas Grotesk Text Pro';
-  src: local('Neue Haas Grotesk Text Pro');
+  src: local('Neue Haas Grotesk Text Pro Bold Italic');
   font-weight: 700;
   font-style: italic;
 }
@@ -37,21 +37,21 @@
 
 @font-face {
   font-family: 'Source Serif 4';
-  src: local('Source Serif 4');
+  src: local('Source Serif 4 Bold');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Source Serif 4';
-  src: local('Source Serif 4');
+  src: local('Source Serif 4 Italic');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Source Serif 4';
-  src: local('Source Serif 4');
+  src: local('Source Serif 4 Bold Italic');
   font-weight: 700;
   font-style: italic;
 }
@@ -66,21 +66,21 @@
 
 @font-face {
   font-family: 'Berkeley Mono Variable';
-  src: local('Berkeley Mono Variable');
+  src: local('Berkeley Mono Variable Bold');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Berkeley Mono Variable';
-  src: local('Berkeley Mono Variable');
+  src: local('Berkeley Mono Variable Oblique');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Berkeley Mono Variable';
-  src: local('Berkeley Mono Variable');
+  src: local('Berkeley Mono Variable Bold Oblique');
   font-weight: 700;
   font-style: italic;
 }

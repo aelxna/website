@@ -8,7 +8,7 @@
     font-family: 'Berkeley Mono', monospace;
   }
 
-  /* font-family: 'Neue Haas Grotesk Text Pro', sans-serif; */
+  font-family: 'Neue Haas Grotesk Text Pro', sans-serif;
 
   body {
     margin: 0;
@@ -18,6 +18,10 @@
   h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
-    /* font-family: 'Neue Haas Grotesk Text Pro', sans-serif; */
+    font-family: 'Neue Haas Grotesk Text Pro', sans-serif;
   }
+
+  --nhg: 'Neue Haas Grotesk Text Pro', system-ui, sans-serif;
+  --mono: 'Berkeley Mono Variable', monospace;
+  --ss4: 'Source Serif 4', serif;
 }

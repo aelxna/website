@@ -1,6 +1,6 @@
 ---
 filename: ghostty-distrobox.md
-title: Achieving Ghostty Shell Integration in Distrobox
+title: Enabling Ghostty Shell Integration in Distrobox
 date: '2026/02/21'
 ---
 

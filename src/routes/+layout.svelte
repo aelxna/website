@@ -16,8 +16,10 @@
 			section = 'gallery';
 		} else if (path?.includes('about')) {
 			section = 'about';
-		} else {
+		} else if (path?.includes('blog')) {
 			section = 'blog';
+		} else {
+			section = 'home';
 		}
 	};
 
@@ -35,13 +37,13 @@
 		<header>
 			<div style="align-items:center;display:flex">
 				<img src="/images/logo.svg" class="logo">
-				aelena.net
+				<a href="/" style="text-decoration:none;color:white">aelena.net</a>
 			</div>
 			<nav>
 				{#if section === 'blog'}
 					<strong>blog</strong>
 				{:else}
-					<a href="/" id="blog-nav">blog</a>
+					<a href="/blog" id="blog-nav">blog</a>
 				{/if}
 
 				{#if section === 'projects'}
@@ -122,6 +124,7 @@
 		position: relative;
 		padding: 0;
 		margin: 0;
+		background: linear-gradient(180deg, var(--text-white), var(--page-light));
 	}
 
 	.window-container {
@@ -161,7 +164,7 @@
 		padding: 0.5rem 0.8rem;
 
 		font-size: 1.5rem;
-		/* font-family: 'Neue Haas Grotesk Text Pro', Helvetica, system-ui, sans-serif; */
+		font-family: 'Neue Haas Grotesk Text Pro', Helvetica, system-ui, sans-serif;
 		color: white;
 
 		display: flex;
@@ -196,7 +199,7 @@
 
 	.content {
 		padding: 0.8rem;
-		/* font-family: 'Source Serif 4', serif; */
+		font-family: 'Source Serif 4', serif;
 	}
 
 	footer {
@@ -223,12 +226,18 @@
 
 			.buttons {
 				margin-top: 2pt;
+				margin-bottom: 2pt;
 				align-items: center;
 
 				img {
 					image-rendering: crisp-edges;
 					image-rendering: pixelated;
 				}
+			}
+
+			.commit {
+				margin-top: 2pt;
+				margin-bottom: 6pt;
 			}
 
 		}

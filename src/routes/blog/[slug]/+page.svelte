@@ -9,7 +9,7 @@
 </script>
 
 <nav class="path">
-  <a href="/">blog</a> ▶ {filename}.md
+  <a href="/blog">blog</a> ▶ {filename}.md
 </nav>
 
 <article>
@@ -21,6 +21,8 @@
 </article>
 
 <style>
+  @import '/static/global.css';
+
   nav.path {
     font-family: "Berkeley Mono Variable", monospace !important;
   }
@@ -29,8 +31,13 @@
     margin-top: 1rem;
   }
 
+  a {
+    color: var(--blog-primary);
+  }
+
   .metadata {
     font-style: italic;
-    /* font-family: 'Neue Haas Grotesk Text Pro', Helvetica, system-ui, sans-serif; */
+    font-family: 'Neue Haas Grotesk Text Pro', Helvetica, system-ui, sans-serif;
+    color: var(--gray-50);
   }
 </style>

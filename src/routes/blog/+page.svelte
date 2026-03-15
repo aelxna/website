@@ -2,9 +2,7 @@
   export let data;
 </script>
 
-<h1 class="pagetitle">
-  Projects
-</h1>
+<h1 class="pagetitle">Blog Posts</h1>
 
 {#if data.posts.length === 0}
 No posts available.
@@ -15,7 +13,7 @@ No posts available.
       <h2>
         <a href={p.path} class="post-title">{p.meta.title}</a>
       </h2>
-      <div class="metadata">{p.meta.date}</div>
+      <div class="metadata">Published {p.meta.date}</div>
     </li>
   {/each}
 </ul>
@@ -30,11 +28,5 @@ No posts available.
     font-family: var(--nhg);
     font-style: italic;
     color: var(--gray-50);
-  }
-  img#uc {
-    display: block;
-    margin: auto;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
   }
 </style>
