@@ -14,7 +14,7 @@
 
 <article>
   <h1>{title}</h1>
-  <p class="metadata">Published {date}</p>
+  <div class="metadata">Published {date}</div>
 
   <svelte:component this={content} />
 
@@ -23,5 +23,14 @@
 <style>
   nav.path {
     font-family: "Berkeley Mono Variable", monospace !important;
+  }
+
+  h1 {
+    margin-top: 1rem;
+  }
+
+  .metadata {
+    font-style: italic;
+    /* font-family: 'Neue Haas Grotesk Text Pro', Helvetica, system-ui, sans-serif; */
   }
 </style>

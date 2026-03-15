@@ -14,14 +14,17 @@
 
 <article>
   <h1>{title}</h1>
-  <p class="metadata">Published {date}</p>
+  <div class="metadata">Published {date}</div>
 
   <svelte:component this={content} />
-
 </article>
 
 <style>
   .path {
     font: "Berkeley Mono Variable", monospace;
+  }
+
+  .metadata {
+    margin-top: 0;
   }
 </style>

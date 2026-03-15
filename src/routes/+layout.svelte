@@ -34,7 +34,7 @@
 	<div class="window">
 		<header>
 			<div style="align-items:center;display:flex">
-				<img src="images/logo.svg" class="logo">
+				<img src="/images/logo.svg" class="logo">
 				aelena.net
 			</div>
 			<nav>
@@ -68,14 +68,25 @@
 		</div>
 	</div>
 </div>
-	<footer>meow</footer>
+	<footer>
+		<div class="footer-content">
+			<div class="buttons">
+				<img src="/images/M2_Demo_Now.jpg">
+				<img src="/images/gamecube.png">
+				<img src="/images/flag-lesbian.png">
+			</div>
+			<div class="commit">
+				meow
+			</div>
+		</div>
+	</footer>
 </main>
 
 <style>
 	@import '/static/global.css';
 
 	:root {
-		--footer-height: 2.5rem;
+		--footer-height: calc(31px + 1rem);
 	}
 
 	.blog {
@@ -120,13 +131,15 @@
 
 	.window {
 		position: relative;
+		border: 1pt solid var(--page-dark);
+		border-radius: 4px;
 		box-shadow:
-			inset 1pt 1pt 0pt 0pt #ffffff,
-			inset -1pt -1pt 0pt 0pt #5b5b5b,
-			inset -3pt -3pt 0pt 0pt #cccccc,
-			inset 3pt 3pt 0pt 0pt #cccccc,
-			inset 4pt 4pt 0pt 0pt #5b5b5b,
-			inset -4pt -4pt 0pt 0pt #ffffff,
+			inset 1pt 1pt 0pt 0pt white,
+			inset -1pt -1pt 0pt 0pt var(--gray-50),
+			inset -3pt -3pt 0pt 0pt var(--gray-85),
+			inset 3pt 3pt 0pt 0pt var(--gray-85),
+			inset 4pt 4pt 0pt 0pt var(--gray-50),
+			inset -4pt -4pt 0pt 0pt white,
 			inset -6pt -6pt 0pt 0pt var(--page-primary),
 			inset -6pt 6pt 0pt 0pt var(--page-primary),
 			inset 6pt -6pt 0pt 0pt var(--page-primary),
@@ -137,9 +150,10 @@
 		margin-left: auto;
 		margin-right: auto;
 
-		border: 1pt solid var(--page-dark);
-		border-radius: 4px;
 		max-width: 900px;
+
+		background-color: var(--text-white);
+		color: var(--text-black);
 	}
 
 	header {
@@ -147,6 +161,7 @@
 		padding: 0.5rem 0.8rem;
 
 		font-size: 1.5rem;
+		/* font-family: 'Neue Haas Grotesk Text Pro', Helvetica, system-ui, sans-serif; */
 		color: white;
 
 		display: flex;
@@ -181,6 +196,7 @@
 
 	.content {
 		padding: 0.8rem;
+		/* font-family: 'Source Serif 4', serif; */
 	}
 
 	footer {
@@ -188,7 +204,33 @@
 		bottom: 0;
 		min-width: 100%;
 		height: var(--footer-height);
-		background-color:#5b5b5b;
 		margin: 0;
+		border-top: 1pt solid var(--page-dark);
+		box-shadow:
+			inset 1pt 1pt 0pt 0pt white,
+			inset -1pt -1pt 0pt 0pt var(--gray-50),
+			inset -3pt -3pt 0pt 0pt var(--gray-75),
+			inset 3pt 3pt 0pt 0pt var(--gray-75),
+			inset 4pt 4pt 0pt 0pt var(--gray-50),
+			inset -4pt -4pt 0pt 0pt white;
+		background-color:var(--gray-75);
+
+		.footer-content {
+			margin: 4pt calc(4pt + 0.5rem);
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+
+			.buttons {
+				margin-top: 2pt;
+				align-items: center;
+
+				img {
+					image-rendering: crisp-edges;
+					image-rendering: pixelated;
+				}
+			}
+
+		}
 	}
 </style>

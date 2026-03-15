@@ -17,6 +17,9 @@
 
   --text-black: oklch(0.225 0.009 255.61);
   --text-white: oklch(0.9811 0.0093 286.93);
+  --gray-50: oklch(0.4906 0.0093 286.93);
+  --gray-75: oklch(0.7498 0.0093 286.93);
+  --gray-85: oklch(0.8502 0.0093 286.93);
 
   --page-primary: var(--blog-primary);
   --page-light: var(--blog-light);
