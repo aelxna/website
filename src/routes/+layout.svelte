@@ -77,6 +77,7 @@
 	<footer>
 		<div class="footer-content">
 			<div class="buttons">
+				<img src="/images/no-right-turn.gif" />
 				<img src="/images/M2_Demo_Now.jpg" />
 				<img src="/images/gamecube.png" />
 				<img src="/images/flag-lesbian.png" />
@@ -205,6 +206,10 @@
 	.content {
 		padding: 0.8rem;
 		font-family: 'Source Serif 4', serif;
+
+		a {
+			color: var(--page-primary) !important;
+		}
 	}
 
 	footer {

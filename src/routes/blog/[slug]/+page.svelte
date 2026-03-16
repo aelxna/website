@@ -23,16 +23,20 @@
 	@import '/static/global.css';
 
 	nav.path {
-		font-family: 'Berkeley Mono Variable', monospace !important;
+		font-family: var(--mono);
+    a:visited {
+      color: var(--blog-primary);
+    }
 	}
 
 	h1 {
-		margin-top: 1rem;
+		margin-top: 1rem !important;
 	}
 
 	a {
 		color: var(--blog-primary);
 	}
+
 
 	.metadata {
 		font-style: italic;

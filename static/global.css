@@ -24,4 +24,6 @@
   --nhg: 'Neue Haas Grotesk Text Pro', system-ui, sans-serif;
   --mono: 'Berkeley Mono Variable', monospace;
   --ss4: 'Source Serif 4', serif;
+
+  color: var(--text-black);
 }
