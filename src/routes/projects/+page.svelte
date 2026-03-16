@@ -25,10 +25,9 @@
 		font-style: italic;
 		color: var(--gray-50);
 	}
-	img#uc {
-		display: block;
-		margin: auto;
-		image-rendering: crisp-edges;
-		image-rendering: pixelated;
+
+	ul {
+		list-style: none;
+		padding-left: 0;
 	}
 </style>

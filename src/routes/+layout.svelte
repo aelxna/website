@@ -28,7 +28,9 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+  <link rel="icon" href="/images/favicon-black.svg">
+  <link rel="icon" href="/images/favicon-black.svg" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="/images/favicon-white.svg" media="(prefers-color-scheme: dark)">
 	<title>{section} · aelena.net</title>
 </svelte:head>
 
@@ -39,12 +41,12 @@
 				<nav>
 					{#if section === 'home'}
 						<div class="sitename">
-							<img src="/images/logo.svg" class="logo" />
+							<img src="/images/logo.svg" class="logo" alt="website logo"/>
 							aelena.net
 						</div>
 					{:else}
 						<a href="/" class="sitename">
-							<img src="/images/logo.svg" class="logo" />
+							<img src="/images/logo.svg" class="logo" alt="website logo"/>
 							aelena.net
 						</a>
 					{/if}
@@ -82,11 +84,11 @@
 	</div>
 	<footer>
 		<div class="footer-content">
-			<div class="buttons">
-				<img src="/images/no-right-turn.gif" />
-				<img src="/images/M2_Demo_Now.jpg" />
-				<img src="/images/gamecube.png" />
-				<img src="/images/flag-lesbian.png" />
+			<div class="buttons" aria-hidden="true">
+				<img src="/images/no-right-turn.gif" alt="No right turn except for regular route transit buses"/>
+				<img src="/images/M2_Demo_Now.jpg" alt="Marathon 2 Demo Now!"/>
+				<img src="/images/gamecube.png" alt="Nintendo GameCube logo"/>
+				<img src="/images/flag-lesbian.png" alt="Lesbian flag"/>
 			</div>
 			<div class="commit">
 				<a href="https://github.com/aelxna/website">{data.commit}</a>
@@ -174,6 +176,8 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		height: 2rem;
+
 
 		.sitename {
 			display: flex;
@@ -236,7 +240,7 @@
 
 	.content {
 		padding: 0.8rem;
-		font-family: var(--ss4);
+		font-family: var(--nhg);
 
 		a {
 			color: var(--page-primary) !important;

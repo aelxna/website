@@ -1,6 +1,6 @@
 <h1 class="pagetitle">about</h1>
 
-<img id="uc" src="/images/under-construction.gif" />
+<img id="uc" src="/images/under-construction.gif" alt="Under construction"/>
 
 <style>
 	div.metadata {
