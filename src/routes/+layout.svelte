@@ -36,10 +36,19 @@
 	<div class="window-container">
 		<div class="window">
 			<header>
-				<div style="align-items:center;display:flex">
-					<img src="/images/logo.svg" class="logo" />
-					<a href="/" style="text-decoration:none;color:white">aelena.net</a>
-				</div>
+				<nav>
+					{#if section === 'home'}
+						<div class="sitename">
+							<img src="/images/logo.svg" class="logo" />
+							aelena.net
+						</div>
+					{:else}
+						<a href="/" class="sitename">
+							<img src="/images/logo.svg" class="logo" />
+							aelena.net
+						</a>
+					{/if}
+				</nav>
 				<nav>
 					{#if section === 'blog'}
 						<strong>blog</strong>
@@ -165,13 +174,18 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-	
+
+		.sitename {
+			display: flex;
+			align-items: center;
+		}
+
 		.logo {
 			height: 1.5rem;
 			padding-right: 0.5rem;
 			display: block;
-			filter: brightness(0) saturate(100%) invert(100%) sepia(63%) saturate(2439%) hue-rotate(180deg)
-				brightness(111%) contrast(105%);
+			filter: brightness(0) saturate(100%) invert(100%) sepia(63%) saturate(2439%)
+				hue-rotate(180deg) brightness(111%) contrast(105%);
 		}
 
 		a {
@@ -184,20 +198,39 @@
 		}
 
 		nav * {
-			filter: drop-shadow(0 0 0.5rem var(--page-primary));
+			text-shadow:
+				0 0 0.5rem var(--page-primary),
+				0 0 1rem var(--page-primary),
+				0 0 1rem var(--page-primary);
 		}
 
 		#blog-nav:hover {
-			filter: drop-shadow(0 0 0.5rem var(--blog-primary));
+			text-shadow:
+				0 0 0.5rem var(--blog-primary),
+				0 0 0.5rem var(--blog-primary),
+				0 0 1rem var(--blog-primary),
+				0 0 1rem var(--blog-primary);
 		}
 		#projects-nav:hover {
-			filter: drop-shadow(0 0 0.5rem var(--projects-primary));
+			text-shadow:
+				0 0 0.5rem var(--projects-primary),
+				0 0 0.5rem var(--projects-primary),
+				0 0 1rem var(--projects-primary),
+				0 0 1rem var(--projects-primary);
 		}
 		#gallery-nav:hover {
-			filter: drop-shadow(0 0 0.5rem var(--gallery-primary));
+			text-shadow:
+				0 0 0.5rem var(--gallery-primary),
+				0 0 0.5rem var(--gallery-primary),
+				0 0 1rem var(--gallery-primary),
+				0 0 1rem var(--gallery-primary);
 		}
 		#about-nav:hover {
-			filter: drop-shadow(0 0 0.5rem var(--about-primary));
+			text-shadow:
+				0 0 0.5rem var(--about-primary),
+				0 0 0.5rem var(--about-primary),
+				0 0 1rem var(--about-primary),
+				0 0 1rem var(--about-primary);
 		}
 	}
 
