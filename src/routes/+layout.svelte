@@ -4,8 +4,7 @@
 	import { onMount } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 	import path from 'path';
-	import { execSync } from 'child_process';
-	import { readFileSync } from 'fs';
+	// import { execSync } from 'child_process';
 
 	let { children } = $props();
 
@@ -29,7 +28,7 @@
 	afterNavigate(() => updateSection(page.url.pathname));
 
 	// const commit = readFileSync('./commit.txt', 'utf-8').split('\n')[0];
-	const commit = execSync("git rev-parse --short HEAD").toString();
+	// const commit = execSync("git rev-parse --short HEAD").toString();
 </script>
 
 <svelte:head>
@@ -83,7 +82,7 @@
 				<img src="/images/flag-lesbian.png">
 			</div>
 			<div class="commit">
-				<a href="https://github.com/aelxna/website">{commit}</a>
+				<a href="https://github.com/aelxna/website"></a>
 			</div>
 		</div>
 	</footer>
