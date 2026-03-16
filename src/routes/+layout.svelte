@@ -29,7 +29,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>{section} | aelena.net</title>
+	<title>{section} · aelena.net</title>
 </svelte:head>
 
 <main class={section}>
@@ -114,14 +114,6 @@
 		--page-dark: var(--about-dark);
 	}
 
-	.logo {
-		height: 1.5rem;
-		padding-right: 0.5rem;
-		display: block;
-		filter: brightness(0) saturate(100%) invert(100%) sepia(63%) saturate(2439%) hue-rotate(180deg)
-			brightness(111%) contrast(105%);
-	}
-
 	main {
 		min-height: 100vh;
 		position: relative;
@@ -167,12 +159,20 @@
 		padding: 0.5rem 0.8rem;
 
 		font-size: 1.5rem;
-		font-family: 'Neue Haas Grotesk Text Pro', Helvetica, system-ui, sans-serif;
+		font-family: var(--nhg);
 		color: white;
 
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	
+		.logo {
+			height: 1.5rem;
+			padding-right: 0.5rem;
+			display: block;
+			filter: brightness(0) saturate(100%) invert(100%) sepia(63%) saturate(2439%) hue-rotate(180deg)
+				brightness(111%) contrast(105%);
+		}
 
 		a {
 			color: white;
@@ -203,7 +203,7 @@
 
 	.content {
 		padding: 0.8rem;
-		font-family: 'Source Serif 4', serif;
+		font-family: var(--ss4);
 
 		a {
 			color: var(--page-primary) !important;

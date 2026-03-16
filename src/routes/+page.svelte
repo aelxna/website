@@ -5,7 +5,7 @@
 <h1 class="pagetitle">Welcome!</h1>
 <img id="uc" src="/images/under-construction.gif" />
 
-<h2 id="most-recent">Most recent post</h2>
+<h2 id="most-recent">latest post</h2>
 {#if data.post === undefined}
 	<div>No posts available.</div>
 {:else}
@@ -18,14 +18,6 @@
 {/if}
 
 <style>
-	h1.pagetitle {
-		text-align: center;
-	}
-
-	h2#most-recent {
-		text-align: center;
-	}
-
 	div.metadata {
 		font-family: var(--nhg);
 		font-style: italic;

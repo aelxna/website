@@ -1,12 +1,8 @@
-<h1 class="pagetitle">Gallery</h1>
+<h1 class="pagetitle">gallery</h1>
 
 <img id="uc" src="/images/under-construction.gif" />
 
 <style>
-	h1.pagetitle {
-		text-align: center;
-	}
-
 	div.metadata {
 		font-family: var(--nhg);
 		font-style: italic;

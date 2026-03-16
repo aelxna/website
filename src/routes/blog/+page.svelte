@@ -2,10 +2,10 @@
 	export let data;
 </script>
 
-<h1 class="pagetitle">Blog Posts</h1>
+<h1 class="pagetitle">blog posts</h1>
 
 {#if data.posts.length === 0}
-	No posts available.
+	<p>No posts available.</p>
 {:else}
 	<ul>
 		{#each data.posts as p}
@@ -20,10 +20,6 @@
 {/if}
 
 <style>
-	h1.pagetitle {
-		text-align: center;
-	}
-
 	div.metadata {
 		font-family: var(--nhg);
 		font-style: italic;
