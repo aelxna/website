@@ -4,7 +4,6 @@
 	import { onMount } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 	import path from 'path';
-	// import { execSync } from 'child_process';
 
 	let { data, children } = $props();
 
@@ -26,13 +25,11 @@
 
 	onMount(() => updateSection(page.url.pathname));
 	afterNavigate(() => updateSection(page.url.pathname));
-
-	// const commit = readFileSync('./commit.txt', 'utf-8').split('\n')[0];
-	// const commit = execSync("git rev-parse --short HEAD").toString();
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>{section} | aelena.net</title>
 </svelte:head>
 
 <main class={section}>
