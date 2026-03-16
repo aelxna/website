@@ -6,7 +6,7 @@
 	import path from 'path';
 	// import { execSync } from 'child_process';
 
-	let { children } = $props();
+	let { data, children } = $props();
 
 	let section = $state('blog');
 
@@ -36,53 +36,53 @@
 </svelte:head>
 
 <main class={section}>
-<div class="window-container">
-	<div class="window">
-		<header>
-			<div style="align-items:center;display:flex">
-				<img src="/images/logo.svg" class="logo">
-				<a href="/" style="text-decoration:none;color:white">aelena.net</a>
+	<div class="window-container">
+		<div class="window">
+			<header>
+				<div style="align-items:center;display:flex">
+					<img src="/images/logo.svg" class="logo" />
+					<a href="/" style="text-decoration:none;color:white">aelena.net</a>
+				</div>
+				<nav>
+					{#if section === 'blog'}
+						<strong>blog</strong>
+					{:else}
+						<a href="/blog" id="blog-nav">blog</a>
+					{/if}
+
+					{#if section === 'projects'}
+						<strong>projects</strong>
+					{:else}
+						<a href="/projects" id="projects-nav">projects</a>
+					{/if}
+
+					{#if section === 'gallery'}
+						<strong>gallery</strong>
+					{:else}
+						<a href="/gallery" id="gallery-nav">gallery</a>
+					{/if}
+
+					{#if section === 'about'}
+						<strong>about</strong>
+					{:else}
+						<a href="/about" id="about-nav">about</a>
+					{/if}
+				</nav>
+			</header>
+			<div class="content">
+				{@render children()}
 			</div>
-			<nav>
-				{#if section === 'blog'}
-					<strong>blog</strong>
-				{:else}
-					<a href="/blog" id="blog-nav">blog</a>
-				{/if}
-
-				{#if section === 'projects'}
-					<strong>projects</strong>
-				{:else}
-					<a href="/projects" id="projects-nav">projects</a>
-				{/if}
-
-				{#if section === 'gallery'}
-					<strong>gallery</strong>
-				{:else}
-					<a href="/gallery" id="gallery-nav">gallery</a>
-				{/if}
-
-				{#if section === 'about'}
-					<strong>about</strong>
-				{:else}
-					<a href="/about" id="about-nav">about</a>
-				{/if}
-			</nav>
-		</header>
-		<div class="content">
-			{@render children()}
 		</div>
 	</div>
-</div>
 	<footer>
 		<div class="footer-content">
 			<div class="buttons">
-				<img src="/images/M2_Demo_Now.jpg">
-				<img src="/images/gamecube.png">
-				<img src="/images/flag-lesbian.png">
+				<img src="/images/M2_Demo_Now.jpg" />
+				<img src="/images/gamecube.png" />
+				<img src="/images/flag-lesbian.png" />
 			</div>
 			<div class="commit">
-				<a href="https://github.com/aelxna/website"></a>
+				<a href="https://github.com/aelxna/website">{data.commit}</a>
 			</div>
 		</div>
 	</footer>
@@ -120,7 +120,8 @@
 		height: 1.5rem;
 		padding-right: 0.5rem;
 		display: block;
-		filter: brightness(0) saturate(100%) invert(100%) sepia(63%) saturate(2439%) hue-rotate(180deg) brightness(111%) contrast(105%);
+		filter: brightness(0) saturate(100%) invert(100%) sepia(63%) saturate(2439%) hue-rotate(180deg)
+			brightness(111%) contrast(105%);
 	}
 
 	main {
@@ -178,7 +179,7 @@
 			color: white;
 			text-decoration: none;
 		}
-		
+
 		a:hover {
 			text-decoration: underline;
 		}
@@ -220,7 +221,7 @@
 			inset 3pt 3pt 0pt 0pt var(--gray-75),
 			inset 4pt 4pt 0pt 0pt var(--gray-50),
 			inset -4pt -4pt 0pt 0pt white;
-		background-color:var(--gray-75);
+		background-color: var(--gray-75);
 
 		.footer-content {
 			margin: 4pt calc(4pt + 0.5rem);
@@ -248,7 +249,7 @@
 					text-decoration: none;
 					font-family: var(--mono);
 				}
-				
+
 				a:hover {
 					text-decoration: underline;
 				}
@@ -257,7 +258,6 @@
 					color: var(--text-black);
 				}
 			}
-
 		}
 	}
 </style>

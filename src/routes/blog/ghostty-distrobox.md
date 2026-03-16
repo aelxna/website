@@ -7,6 +7,7 @@ date: '2026/02/21'
 (Based on [this guide](https://www.ericst.ch/comp/ghostty-distrobox-integration/). The script from this blog post was further modified as I saw fit, but most of the credit goes to that guide.)
 
 Create the following script on your host (`~/.ghostty-cache`):
+
 ```bash
 #! /usr/bin/env bash
 
@@ -47,11 +48,15 @@ fi
 
 unset GHOSTTY_CACHE_DIR GHOSTTY_RESOURCES_CACHE
 ```
+
 Run the script by placing this line in your **host** shell's config (in my case `~/.config/fish/config.fish`):
+
 ```fish
 $HOME/.ghostty-cache
 ```
+
 Finally, in your container's shell config, source the corresponding shell integration script from the cache:
+
 ```bash
 # .zshrc
 
@@ -60,4 +65,5 @@ export HOST_HOME=/run/host/home/$USER
 export GHOSTTY_RESOURCES_DIR=$HOST_HOME/.cache/ghostty/resources-copy
 builtin source "$GHOSTTY_RESOURCES_DIR/shell-integration/zsh/ghostty-integration"
 ```
+
 This basically copies the host's ghostty resources folder to somewhere the container can access, and it just kind of works! Ghostty will now show your directory, say which command you're running, and understand that it can exit when you're just in the shell.

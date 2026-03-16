@@ -19,7 +19,7 @@ export const load = async ({ fetch }) => {
 		section = 'blog';
 	} else {
 		post = postb.meta.date > postp.meta.date ? postb : postp;
-		section = post === postb ? 'blog': 'project';
+		section = post === postb ? 'blog' : 'project';
 	}
 
 	return {

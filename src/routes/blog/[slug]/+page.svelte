@@ -1,43 +1,42 @@
-<script lang=ts>
-  export let data;
-  const { title, date, content } = data;
+<script lang="ts">
+	export let data;
+	const { title, date, content } = data;
 
-  import { page } from '$app/state';
+	import { page } from '$app/state';
 
-  const path = page.url.pathname.split('/');
-  const filename = path[path.length - 1];
+	const path = page.url.pathname.split('/');
+	const filename = path[path.length - 1];
 </script>
 
 <nav class="path">
-  <a href="/blog">blog</a> ▶ {filename}.md
+	<a href="/blog">blog</a> ▶ {filename}.md
 </nav>
 
 <article>
-  <h1>{title}</h1>
-  <div class="metadata">Published {date}</div>
+	<h1>{title}</h1>
+	<div class="metadata">Published {date}</div>
 
-  <svelte:component this={content} />
-
+	<svelte:component this={content} />
 </article>
 
 <style>
-  @import '/static/global.css';
+	@import '/static/global.css';
 
-  nav.path {
-    font-family: "Berkeley Mono Variable", monospace !important;
-  }
+	nav.path {
+		font-family: 'Berkeley Mono Variable', monospace !important;
+	}
 
-  h1 {
-    margin-top: 1rem;
-  }
+	h1 {
+		margin-top: 1rem;
+	}
 
-  a {
-    color: var(--blog-primary);
-  }
+	a {
+		color: var(--blog-primary);
+	}
 
-  .metadata {
-    font-style: italic;
-    font-family: 'Neue Haas Grotesk Text Pro', Helvetica, system-ui, sans-serif;
-    color: var(--gray-50);
-  }
+	.metadata {
+		font-style: italic;
+		font-family: 'Neue Haas Grotesk Text Pro', Helvetica, system-ui, sans-serif;
+		color: var(--gray-50);
+	}
 </style>
