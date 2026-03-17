@@ -204,8 +204,8 @@
 		nav * {
 			text-shadow:
 				0 0 0.5rem var(--page-primary),
-				0 0 1rem var(--page-primary),
-				0 0 1rem var(--page-primary);
+				0 0 0.5rem var(--page-primary),
+				0 0 0.25rem var(--page-primary);
 		}
 
 		#blog-nav:hover {

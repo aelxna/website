@@ -21,6 +21,12 @@
     font-family: 'Neue Haas Grotesk Text Pro', sans-serif;
   }
 
+  .content {
+    a {
+      color: var(--page-primary);
+    }
+  }
+
   --nhg: 'Neue Haas Grotesk Text Pro', system-ui, sans-serif;
   --mono: 'Berkeley Mono Variable', monospace;
   --ss4: 'Source Serif 4', serif;

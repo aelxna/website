@@ -24,9 +24,10 @@
 
 	nav.path {
 		font-family: var(--mono);
-    a:visited {
-      color: var(--blog-primary);
-    }
+
+		a {
+			color: var(--blog-primary);
+		}
 	}
 
 	h1 {
@@ -34,7 +35,7 @@
 	}
 
 	a {
-		color: var(--blog-primary);
+		color: var(--blog-primary) !important;
 	}
 
 
