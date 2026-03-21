@@ -33,13 +33,5 @@
 	
 	h3#latest-posttitle {
 		font-size: 1.5em;
-
-		a {
-			text-decoration: none;
-		}
-
-		a:hover {
-			text-decoration: underline;
-		}
 	}
 </style>

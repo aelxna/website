@@ -241,10 +241,6 @@
 	.content {
 		padding: 0.8rem;
 		font-family: var(--nhg);
-
-		a {
-			color: var(--page-primary) !important;
-		}
 	}
 
 	footer {

@@ -34,11 +34,6 @@
 		margin-top: 1rem !important;
 	}
 
-	a {
-		color: var(--blog-primary) !important;
-	}
-
-
 	.metadata {
 		font-style: italic;
 		font-family: 'Neue Haas Grotesk Text Pro', Helvetica, system-ui, sans-serif;
