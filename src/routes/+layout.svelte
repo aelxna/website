@@ -4,8 +4,9 @@
 	import { onMount } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 	import path from 'path';
+	import commit from '$lib/assets/commit.json'
 
-	let { data, children } = $props();
+	let { children } = $props();
 
 	let section = $state('blog');
 
@@ -91,7 +92,7 @@
 				<img src="/images/flag-lesbian.png" alt="Lesbian flag"/>
 			</div>
 			<div class="commit">
-				<a href="https://github.com/aelxna/website">{data.commit}</a>
+				<a href="https://github.com/aelxna/website">{commit.commit}</a>
 			</div>
 		</div>
 	</footer>
@@ -284,6 +285,7 @@
 					color: var(--text-black);
 					text-decoration: none;
 					font-family: var(--mono);
+					font-size: 0.875rem;
 				}
 
 				a:hover {

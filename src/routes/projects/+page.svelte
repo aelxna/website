@@ -1,19 +1,21 @@
 <script>
-	export let data;
+	import posts from '$lib/assets/posts.json';
+
+	let project_posts = posts.filter(x => x.type === "projects");
 </script>
 
 <h1 class="pagetitle">projects</h1>
 
-{#if data.posts.length === 0}
+{#if project_posts.length === 0}
 	<p>No posts available.</p>
 {:else}
 	<ul>
-		{#each data.posts as p}
+		{#each project_posts as p}
 			<li class="post">
 				<h2>
-					<a href={p.path} class="post-title">{p.meta.title}</a>
+					<a href={`/projects/post/${p.route}`} class="post-title">{p.title}</a>
 				</h2>
-				<div class="metadata">{p.meta.date}</div>
+				<div class="metadata">Published {p.date}</div>
 			</li>
 		{/each}
 	</ul>

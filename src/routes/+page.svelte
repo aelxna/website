@@ -1,19 +1,21 @@
 <script>
-	export let data;
+	import posts from '$lib/assets/posts.json';
+
+	const latest = posts.length === 0 ? undefined : posts.sort((a, b) => (new Date(a.date)).getTime() - (new Date(b.date)).getTime())[0]
 </script>
 
 <h1 class="pagetitle">Welcome!</h1>
 <img id="uc" src="/images/under-construction.gif" alt="Under construction"/>
 
 <h2 id="most-recent">latest post</h2>
-{#if data.post === undefined}
+{#if latest === undefined}
 	<div>No posts available.</div>
 {:else}
 	<div class="post">
 		<h3 id="latest-posttitle">
-			<a href={data.post.path} class="post-title">{data.post.meta.title}</a>
+			<a href={`/${latest.type}/post/${latest.route}`} class="post-title">{latest.title}</a>
 		</h3>
-		<div class="metadata">Published {data.post.meta.date} · {data.section}</div>
+		<div class="metadata">Published {latest.date} · {latest.type === "blog" ? "blog" : "project"}</div>
 	</div>
 {/if}
 
