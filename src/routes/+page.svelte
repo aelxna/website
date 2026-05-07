@@ -5,9 +5,10 @@
 </script>
 
 <h1 class="pagetitle">welcome!</h1>
-hi!!!!!! i'm elena, a computer scientist from minnesota. this is my website for blog posts, project showcases, and even an image gallery! i'll post about neat computer tricks, interesting projects i've worked on, and more. hope you enjoy! ^_^
 
-<hr>
+<p>
+hi!!!!!! i'm elena, a computer scientist from minnesota. this is my website for blog posts, project showcases, and even an image gallery! i'll post about neat computer tricks, interesting projects i've worked on, and more. hope you enjoy! ^_^
+</p>
 
 <h2 id="most-recent">latest post</h2>
 {#if latest === undefined}
