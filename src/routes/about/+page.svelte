@@ -13,10 +13,4 @@ Anyways, I want this website to double as both a showcase to potential employers
 </p>
 
 <style>
-	img#uc {
-		display: block;
-		margin: auto;
-		image-rendering: crisp-edges;
-		image-rendering: pixelated;
-	}
 </style>
