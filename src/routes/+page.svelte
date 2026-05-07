@@ -4,8 +4,10 @@
 	const latest = posts.length === 0 ? undefined : posts.sort((a, b) => (new Date(a.date)).getTime() - (new Date(b.date)).getTime())[0]
 </script>
 
-<h1 class="pagetitle">Welcome!</h1>
-<img id="uc" src="/images/under-construction.gif" alt="Under construction"/>
+<h1 class="pagetitle">welcome!</h1>
+hi!!!!!! i'm elena, a computer scientist from minnesota. this is my website for blog posts, project showcases, and even an image gallery! i'll post about neat computer tricks, interesting projects i've worked on, and more. hope you enjoy! ^_^
+
+<hr>
 
 <h2 id="most-recent">latest post</h2>
 {#if latest === undefined}
@@ -24,13 +26,6 @@
 		font-family: var(--nhg);
 		font-style: italic;
 		color: var(--gray-50);
-	}
-
-	img#uc {
-		display: block;
-		margin: auto;
-		image-rendering: crisp-edges;
-		image-rendering: pixelated;
 	}
 	
 	h3#latest-posttitle {
