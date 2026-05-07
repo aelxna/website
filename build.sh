@@ -1,0 +1,1 @@
+./get_commit.sh && bun run build && sudo cp -r build/* /var/www/aelena/
