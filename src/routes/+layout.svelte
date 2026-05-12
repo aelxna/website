@@ -160,7 +160,7 @@
 		margin-left: auto;
 		margin-right: auto;
 
-		max-width: 900px;
+		max-width: 1000px;
 
 		background-color: var(--text-white);
 		color: var(--text-black);
@@ -168,16 +168,16 @@
 
 	header {
 		background: linear-gradient(90deg, var(--page-primary), var(--page-light));
-		padding: 0.5rem 0.8rem;
+		padding: 0.5rem 0.75rem;
 
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		font-family: var(--nhg);
-		color: white;
+		color: var(--text-white);
 
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 2rem;
+		height: 1.5rem;
 
 
 		.sitename {
@@ -248,7 +248,7 @@
 		position: absolute;
 		bottom: 0;
 		min-width: 100%;
-		height: var(--footer-height);
+		min-height: var(--footer-height);
 		margin: 0;
 		border-top: 1pt solid var(--page-dark);
 		box-shadow:
@@ -261,14 +261,14 @@
 		background-color: var(--gray-75);
 
 		.footer-content {
-			margin: 4pt calc(4pt + 0.5rem);
 			align-items: center;
 			display: flex;
 			justify-content: space-between;
+			margin-left: 6pt;
+			margin-right: calc(4pt + 0.5em);
 
 			.buttons {
-				margin-top: 2pt;
-				margin-bottom: 2pt;
+				padding-top: 6pt;
 				align-items: center;
 
 				img {
@@ -278,8 +278,6 @@
 			}
 
 			.commit {
-				margin-top: 2pt;
-				margin-bottom: 6pt;
 
 				a {
 					color: var(--text-black);
