@@ -160,7 +160,7 @@
 		margin-left: auto;
 		margin-right: auto;
 
-		max-width: 1000px;
+		max-width: 900px;
 
 		background-color: var(--text-white);
 		color: var(--text-black);
