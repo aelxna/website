@@ -35,6 +35,7 @@
 	},
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.10",
-		"svelte-highlight": "^7.9.0"
+		"svelte-highlight": "^7.9.0",
+		"svelte-katex": "^0.2.0"
 	}
 }

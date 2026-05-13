@@ -4,7 +4,8 @@
 	import { onMount } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 	import path from 'path';
-	import commit from '$lib/assets/commit.json'
+	import Navbar from '$lib/components/Navbar.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	let { children } = $props();
 
@@ -38,64 +39,13 @@
 <main class={section}>
 	<div class="window-container">
 		<div class="window">
-			<header>
-				<nav>
-					{#if section === 'home'}
-						<div class="sitename">
-							<img src="/images/logo.svg" class="logo" alt="website logo"/>
-							aelena.net
-						</div>
-					{:else}
-						<a href="/" class="sitename">
-							<img src="/images/logo.svg" class="logo" alt="website logo"/>
-							aelena.net
-						</a>
-					{/if}
-				</nav>
-				<nav>
-					{#if section === 'blog'}
-						<strong>blog</strong>
-					{:else}
-						<a href="/blog" id="blog-nav">blog</a>
-					{/if}
-
-					{#if section === 'projects'}
-						<strong>projects</strong>
-					{:else}
-						<a href="/projects" id="projects-nav">projects</a>
-					{/if}
-
-					{#if section === 'gallery'}
-						<strong>gallery</strong>
-					{:else}
-						<a href="/gallery" id="gallery-nav">gallery</a>
-					{/if}
-
-					{#if section === 'about'}
-						<strong>about</strong>
-					{:else}
-						<a href="/about" id="about-nav">about</a>
-					{/if}
-				</nav>
-			</header>
+			<Navbar {section} />
 			<div class="content">
 				{@render children()}
 			</div>
 		</div>
 	</div>
-	<footer>
-		<div class="footer-content">
-			<div class="buttons" aria-hidden="true">
-				<img src="/images/no-right-turn.gif" alt="No right turn except for regular route transit buses"/>
-				<img src="/images/M2_Demo_Now.jpg" alt="Marathon 2 Demo Now!"/>
-				<img src="/images/gamecube.png" alt="Nintendo GameCube logo"/>
-				<img src="/images/flag-lesbian.png" alt="Lesbian flag"/>
-			</div>
-			<div class="commit">
-				<a href="https://github.com/aelxna/website">{commit.commit}</a>
-			</div>
-		</div>
-	</footer>
+	<Footer />
 </main>
 
 <style>
@@ -155,7 +105,7 @@
 			inset 6pt -6pt 0pt 0pt var(--page-primary),
 			inset 6pt 6pt 0pt 0pt var(--page-primary);
 
-		padding: 0.8rem;
+		padding: 0.75rem;
 
 		margin-left: auto;
 		margin-right: auto;
@@ -166,134 +116,10 @@
 		color: var(--text-black);
 	}
 
-	header {
-		background: linear-gradient(90deg, var(--page-primary), var(--page-light));
-		padding: 0.5rem 0.75rem;
-
-		font-size: 1.25rem;
-		font-family: var(--nhg);
-		color: var(--text-white);
-
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		height: 1.5rem;
-
-
-		.sitename {
-			display: flex;
-			align-items: center;
-		}
-
-		.logo {
-			height: 1.5rem;
-			padding-right: 0.5rem;
-			display: block;
-			filter: brightness(0) saturate(100%) invert(100%) sepia(63%) saturate(2439%)
-				hue-rotate(180deg) brightness(111%) contrast(105%);
-		}
-
-		a {
-			color: white;
-			text-decoration: none;
-		}
-
-		a:hover {
-			text-decoration: underline;
-		}
-
-		nav * {
-			text-shadow:
-				0 0 0.5rem var(--page-primary),
-				0 0 0.5rem var(--page-primary),
-				0 0 0.25rem var(--page-primary);
-		}
-
-		#blog-nav:hover {
-			text-shadow:
-				0 0 0.5rem var(--blog-primary),
-				0 0 0.5rem var(--blog-primary),
-				0 0 1rem var(--blog-primary),
-				0 0 1rem var(--blog-primary);
-		}
-		#projects-nav:hover {
-			text-shadow:
-				0 0 0.5rem var(--projects-primary),
-				0 0 0.5rem var(--projects-primary),
-				0 0 1rem var(--projects-primary),
-				0 0 1rem var(--projects-primary);
-		}
-		#gallery-nav:hover {
-			text-shadow:
-				0 0 0.5rem var(--gallery-primary),
-				0 0 0.5rem var(--gallery-primary),
-				0 0 1rem var(--gallery-primary),
-				0 0 1rem var(--gallery-primary);
-		}
-		#about-nav:hover {
-			text-shadow:
-				0 0 0.5rem var(--about-primary),
-				0 0 0.5rem var(--about-primary),
-				0 0 1rem var(--about-primary),
-				0 0 1rem var(--about-primary);
-		}
-	}
 
 	.content {
-		padding: 0.8rem;
+		padding: 0.75rem;
 		font-family: var(--nhg);
 	}
 
-	footer {
-		position: absolute;
-		bottom: 0;
-		min-width: 100%;
-		min-height: var(--footer-height);
-		margin: 0;
-		border-top: 1pt solid var(--page-dark);
-		box-shadow:
-			inset 1pt 1pt 0pt 0pt white,
-			inset -1pt -1pt 0pt 0pt var(--gray-50),
-			inset -3pt -3pt 0pt 0pt var(--gray-75),
-			inset 3pt 3pt 0pt 0pt var(--gray-75),
-			inset 4pt 4pt 0pt 0pt var(--gray-50),
-			inset -4pt -4pt 0pt 0pt white;
-		background-color: var(--gray-75);
-
-		.footer-content {
-			align-items: center;
-			display: flex;
-			justify-content: space-between;
-			margin-left: 6pt;
-			margin-right: calc(4pt + 0.5em);
-
-			.buttons {
-				padding-top: 6pt;
-				align-items: center;
-
-				img {
-					image-rendering: crisp-edges;
-					image-rendering: pixelated;
-				}
-			}
-
-			.commit {
-
-				a {
-					color: var(--text-black);
-					text-decoration: none;
-					font-family: var(--mono);
-					font-size: 0.875rem;
-				}
-
-				a:hover {
-					text-decoration: underline;
-				}
-
-				a:visited {
-					color: var(--text-black);
-				}
-			}
-		}
-	}
 </style>
