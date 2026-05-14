@@ -253,6 +253,7 @@ The nice thing about Terraforma is that it outputs a heightmap that can be used 
 
     img {
       height: 16rem;
+      max-width: 100%;
     }
   }
 </style>

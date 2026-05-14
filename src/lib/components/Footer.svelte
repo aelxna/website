@@ -10,6 +10,7 @@
       <img src="/images/M2_Demo_Now.jpg" alt="Marathon 2 Demo Now!"/>
       <img src="/images/gamecube.png" alt="Nintendo GameCube logo"/>
       <img src="/images/flag-lesbian.png" alt="Lesbian flag"/>
+			<img src="/images/debian2.gif" alt="Debian GNU/Linux Powered" />
     </div>
     <div class="commit">
       <a href="https://github.com/aelxna/website">{commit.commit}</a>
