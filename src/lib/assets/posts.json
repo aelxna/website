@@ -1,5 +1,13 @@
 [
   {
+    "title": "Terraforma: Building Worlds with Perlin Noise and fBm",
+    "date": "2026/05/13",
+    "type": "projects",
+    "route": "terraforma",
+    "repo": "https://github.com/aelxna/terraforma",
+    "tags": ["rust", "python", "graphics"]
+  },
+  {
     "title": "Enabling Ghostty Shell Integration with Distrobox",
     "date": "2026/02/21",
     "type": "blog",

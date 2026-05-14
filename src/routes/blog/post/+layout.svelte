@@ -1,14 +1,19 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import posts from '$lib/assets/posts.json';
+	import { tokyoNightDark } from 'svelte-highlight/styles';
 
 	let { children } = $props();
 
 	const path = page.url.pathname.split('/');
 	const filename = path[path.length - 1];
 
-	const post = posts.filter(x => x.route === filename)[0];
+	const post = posts.filter((x) => x.route === filename)[0];
 </script>
+
+<svelte:head>
+	{@html tokyoNightDark}
+</svelte:head>
 
 <nav class="path">
 	<a href="/blog">blog</a> ▶ {filename}

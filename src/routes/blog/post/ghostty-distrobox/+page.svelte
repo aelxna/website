@@ -1,9 +1,8 @@
 <script>
-    import { Highlight } from "svelte-highlight";
-    import { bash } from "svelte-highlight/languages";
-    import { rosePineMoon } from "svelte-highlight/styles";
+	import { Highlight } from 'svelte-highlight';
+	import { bash } from 'svelte-highlight/languages';
 
-    const ghostty_cache = `#!/usr/bin/env bash
+	const ghostty_cache = `#!/usr/bin/env bash
 
 # Ghostty shell integration for Bash with full resources caching
 GHOSTTY_CACHE_DIR="$HOME/.cache/ghostty"
@@ -42,35 +41,34 @@ fi
 
 unset GHOSTTY_CACHE_DIR GHOSTTY_RESOURCES_CACHE`;
 
-    const config_fish = `$HOME/.ghostty-cache`;
+	const config_fish = `$HOME/.ghostty-cache`;
 
-    const integration = `# .zshrc
+	const integration = `# .zshrc
 
 export HOST_HOME=/run/host/home/$USER
 # Ghostty shell integration for Bash with full resources caching
 export GHOSTTY_RESOURCES_DIR=$HOST_HOME/.cache/ghostty/resources-copy
 builtin source "$GHOSTTY_RESOURCES_DIR/shell-integration/zsh/ghostty-integration"`;
-
 </script>
 
-<svelte:head>
-    {@html rosePineMoon}
-</svelte:head>
-
 <p>
-(Based on <a href="https://www.ericst.ch/comp/ghostty-distrobox-integration/">this guide</a>. The script from this blog post was further modified as I saw fit, but most of the credit goes to that guide.)
+	(Based on <a href="https://www.ericst.ch/comp/ghostty-distrobox-integration/">this guide</a>. The
+	script from this blog post was further modified as I saw fit, but most of the credit goes to that
+	guide.)
 </p>
 
 Create the following script on your host (<code>~/.ghostty-cache</code>):
 <Highlight language={bash} code={ghostty_cache} />
 
-Run the script by placing this line in your <strong>host</strong> shell's config (in my case <code>~/.config/fish/config.fish</code>):
+Run the script by placing this line in your <strong>host</strong> shell's config (in my case
+<code>~/.config/fish/config.fish</code>):
 <Highlight language={bash} code={config_fish} />
 
-
-Finally, in your container's shell config, source the corresponding shell integration script from the cache:
+Finally, in your container's shell config, source the corresponding shell integration script from
+the cache:
 
 <Highlight language={bash} code={integration} />
 
-This basically copies the host's ghostty resources folder to somewhere the container can access, and it just kind of works! Ghostty will now show your directory, say which command you're running, and understand that it can exit when you're just in the shell.
-
+This basically copies the host's ghostty resources folder to somewhere the container can access, and
+it just kind of works! Ghostty will now show your directory, say which command you're running, and
+understand that it can exit when you're just in the shell.

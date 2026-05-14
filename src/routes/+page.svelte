@@ -1,7 +1,7 @@
 <script>
 	import posts from '$lib/assets/posts.json';
 
-	const latest = posts.length === 0 ? undefined : posts.sort((a, b) => (new Date(a.date)).getTime() - (new Date(b.date)).getTime())[0]
+	const latest = posts.length === 0 ? undefined : posts.sort((a, b) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime())[0]
 </script>
 
 <h1 class="pagetitle">welcome!</h1>
