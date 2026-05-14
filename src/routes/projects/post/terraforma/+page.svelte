@@ -78,7 +78,7 @@ algorithm can be described in these steps:
 	is to find four dot products between the gradients of the corners and the point's distance from
 	the corners. Based on the corner's coordinates, it chooses from one of four gradients: <Math
 		latex="(1, 1), (-1, 1), (1, -1), (-1, -1)"
-	/>. The gradient <Math latex={'\\vec(g)'} /> is calculated as such, where <Math latex="G" /> is the
+	/>. The gradient <Math latex={'\\vec{g}'} /> is calculated as such, where <Math latex="G" /> is the
 	array of possible gradients:
 </p>
 	<Math
