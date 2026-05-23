@@ -22,6 +22,7 @@
 
 <style>
   @import "/static/global.css";
+	@import "/static/colors.css";
 
 	footer {
 		width: 100%;
@@ -46,6 +47,7 @@
 				img {
 					image-rendering: crisp-edges;
 					image-rendering: pixelated;
+					box-shadow: var(--shadow) 4px 4px;
 				}
 			}
 

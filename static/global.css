@@ -11,11 +11,28 @@
   }
 
   pre code {
-    border-radius: var(--corner-radius);
+    box-shadow: var(--shadow) 4px 4px;
+    border: 1px solid var(--page-primary);
   }
 
   math {
     font-family: var(--math);
+  }
+  
+  figure {
+    text-align: center;
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    img {
+      max-height: 16rem;
+      max-width: 100%;
+      height: auto;
+      width: auto;
+      box-shadow: var(--shadow) 4px 4px;
+    }
   }
 
   font-family: var(--sans);

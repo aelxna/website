@@ -92,21 +92,12 @@
 
 	.window {
 		position: relative;
-		border: 1pt solid var(--page-dark);
-		border-radius: 4px;
-		box-shadow:
-			inset 1pt 1pt 0pt 0pt white,
-			inset -1pt -1pt 0pt 0pt var(--gray-50),
-			inset -3pt -3pt 0pt 0pt var(--gray-85),
-			inset 3pt 3pt 0pt 0pt var(--gray-85),
-			inset 4pt 4pt 0pt 0pt var(--gray-50),
-			inset -4pt -4pt 0pt 0pt white,
-			inset -6pt -6pt 0pt 0pt var(--page-primary),
-			inset -6pt 6pt 0pt 0pt var(--page-primary),
-			inset 6pt -6pt 0pt 0pt var(--page-primary),
-			inset 6pt 6pt 0pt 0pt var(--page-primary);
+		border: 1pt solid var(--page-primary);
 
-		padding: 0.75rem;
+		box-shadow: var(--shadow) 4px 4px;
+
+		padding: 0.25rem;
+		padding-bottom: 0.5rem;
 
 		margin-left: auto;
 		margin-right: auto;

@@ -248,16 +248,3 @@ The nice thing about Terraforma is that it outputs a heightmap that can be used 
 <p>
   That being said, this project was really fun to make and I can't wait to iterate on it even more!
 </p>
-
-<style>
-  figure {
-    text-align: center;
-
-    img {
-      max-height: 16rem;
-      max-width: 100%;
-      height: auto;
-      width: auto;
-    }
-  }
-</style>
