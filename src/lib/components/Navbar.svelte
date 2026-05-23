@@ -49,18 +49,20 @@
 		padding: 0.5rem 0.75rem;
 
 		font-size: 1.25rem;
-		font-family: var(--nhg);
+		font-family: var(--header);
 		color: var(--text-white);
 
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		align-items: center;
-		height: 1.5rem;
+		min-height: 1.5rem;
 
 
 		.sitename {
 			display: flex;
 			align-items: center;
+			font-weight: bold;
 		}
 
 		.logo {

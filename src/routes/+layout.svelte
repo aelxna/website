@@ -43,16 +43,17 @@
 			<div class="content">
 				{@render children()}
 			</div>
+			<div class='dotted-gradient'><br></div>
+			<Footer />
 		</div>
 	</div>
-	<Footer />
 </main>
 
 <style>
 	@import '/static/global.css';
 
 	:root {
-		--footer-height: calc(31px + 1rem);
+		--footer-height: 31px;
 	}
 
 	.blog {
@@ -86,7 +87,7 @@
 
 	.window-container {
 		padding-top: 0.5rem;
-		padding-bottom: calc(var(--footer-height) + 0.5rem);
+		padding-bottom: 0.5rem;
 	}
 
 	.window {
@@ -114,12 +115,21 @@
 
 		background-color: var(--text-white);
 		color: var(--text-black);
-	}
 
+	}
 
 	.content {
 		padding: 0.75rem;
-		font-family: var(--nhg);
+		padding-bottom: 0;
+		font-family: var(--sans);
+	}
+
+	.dotted-gradient {
+  	background-image: linear-gradient(to right, var(--page-light) 25%, rgba(255, 255, 255, 0) 0%);
+  	background-position: top;
+  	background-size: 8px 2px;
+  	background-repeat: repeat-x;
+		height: 0.5rem;
 	}
 
 </style>

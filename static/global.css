@@ -14,7 +14,11 @@
     border-radius: var(--corner-radius);
   }
 
-  font-family: var(--nhg);
+  math {
+    font-family: var(--math);
+  }
+
+  font-family: var(--sans);
 
   body {
     margin: 0;
@@ -24,7 +28,7 @@
   h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
-    font-family: var(--nhg);
+    font-family: var(--header);
     a {
       text-decoration: none;
     }
@@ -38,10 +42,6 @@
       color: var(--page-primary);
     }
   }
-
-  --nhg: 'Neue Haas Grotesk Text Pro', system-ui, sans-serif;
-  --mono: 'Berkeley Mono Variable', monospace;
-  --ss4: 'Source Serif 4', serif;
 
   color: var(--text-black);
   font-size: 1rem;

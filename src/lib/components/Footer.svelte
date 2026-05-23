@@ -1,5 +1,7 @@
 <script>
   import commit from "$lib/assets/commit.json";
+	import Icon from 'svelte-awesome';
+	import github from 'svelte-awesome/icons/github';
 </script>
 
 
@@ -13,7 +15,7 @@
 			<img src="/images/debian2.gif" alt="Debian GNU/Linux Powered" />
     </div>
     <div class="commit">
-      <a href="https://github.com/aelxna/website">{commit.commit}</a>
+      <a href="https://github.com/aelxna/website"><span><Icon data={github}/></span>{commit.commit}</a>
     </div>
   </div>
 </footer>
@@ -22,31 +24,24 @@
   @import "/static/global.css";
 
 	footer {
-		position: absolute;
-		bottom: 0;
-		min-width: 100%;
+		width: 100%;
 		min-height: var(--footer-height);
-		margin: 0;
-		border-top: 1pt solid var(--page-dark);
-		box-shadow:
-			inset 1pt 1pt 0pt 0pt white,
-			inset -1pt -1pt 0pt 0pt var(--gray-50),
-			inset -3pt -3pt 0pt 0pt var(--gray-75),
-			inset 3pt 3pt 0pt 0pt var(--gray-75),
-			inset 4pt 4pt 0pt 0pt var(--gray-50),
-			inset -4pt -4pt 0pt 0pt white;
-		background-color: var(--gray-75);
+		/* margin-top: 0.5rem;
+		margin-bottom: 0.5rem; */
 
 		.footer-content {
 			align-items: center;
 			display: flex;
 			justify-content: space-between;
-			margin-left: 0.5rem;
-			margin-right: 1rem;
+			flex-wrap: wrap;
+			margin: 0;
 
 			.buttons {
-				padding-top: 0.5rem;
+				padding-top: 0;
 				align-items: center;
+				display: flex;
+				gap: 0;
+				flex-wrap: wrap;
 
 				img {
 					image-rendering: crisp-edges;
@@ -55,12 +50,18 @@
 			}
 
 			.commit {
+				padding-right: 0.5rem;
 
 				a {
 					color: var(--text-black);
 					text-decoration: none;
 					font-family: var(--mono);
 					font-size: 0.875rem;
+					display: inline-block;
+
+					span {
+						vertical-align: middle;
+					}
 				}
 
 				a:hover {

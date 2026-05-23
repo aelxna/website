@@ -23,7 +23,6 @@
 
 <style>
 	div.metadata {
-		font-family: var(--nhg);
 		font-style: italic;
 		color: var(--gray-50);
 	}
@@ -31,6 +30,5 @@
 	ul {
 		list-style: none;
 		padding-left: 0;
-		margin-bottom: 0;
 	}
 </style>

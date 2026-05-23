@@ -230,7 +230,9 @@ total /= amp_total; // guarantee within the range 0-1
 </figure>
 
 <h2 id="misc">Importing into Unity</h2>
+<p>
 The nice thing about Terraforma is that it outputs a heightmap that can be used anywhere else, such as game engines. Because the program outputs an 8-bit PNG instead of a 16-bit RAW, if you want to use it in Unity you have to convert it to RAW (I used GIMP for this purpose). However, once you do that, it's really simple to just import and use:
+</p>
 <figure>
   <img src="/posts/terraforma/unityheightmap.png" alt="The heightmap that was imported into Unity">
   <img src="/posts/terraforma/unity.png" alt="A screenshot in the Unity Engine with the imported terrain">
@@ -252,8 +254,10 @@ The nice thing about Terraforma is that it outputs a heightmap that can be used 
     text-align: center;
 
     img {
-      height: 16rem;
+      max-height: 16rem;
       max-width: 100%;
+      height: auto;
+      width: auto;
     }
   }
 </style>

@@ -12,9 +12,9 @@ hi!!!!!! i'm elena, a computer scientist from minnesota. this is my website for 
 
 <h2 id="most-recent">latest post</h2>
 {#if latest === undefined}
-	<div>No posts available.</div>
+	<p>No posts available.</p>
 {:else}
-	<div class="post">
+	<div class="post" style="margin-bottom:1rem;">
 		<h3 id="latest-posttitle">
 			<a href={`/${latest.type}/post/${latest.route}`} class="post-title">{latest.title}</a>
 		</h3>
@@ -24,7 +24,6 @@ hi!!!!!! i'm elena, a computer scientist from minnesota. this is my website for 
 
 <style>
 	div.metadata {
-		font-family: var(--nhg);
 		font-style: italic;
 		color: var(--gray-50);
 	}

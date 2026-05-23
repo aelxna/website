@@ -57,18 +57,21 @@ builtin source "$GHOSTTY_RESOURCES_DIR/shell-integration/zsh/ghostty-integration
 	guide.)
 </p>
 
-Create the following script on your host (<code>~/.ghostty-cache</code>):
+<p>Create the following script on your host (<code>~/.ghostty-cache</code>):</p>
 <Highlight language={bash} code={ghostty_cache} />
 
-Run the script by placing this line in your <strong>host</strong> shell's config (in my case
-<code>~/.config/fish/config.fish</code>):
+<p>Run the script by placing this line in your <strong>host</strong> shell's config (in my case
+<code>~/.config/fish/config.fish</code>):</p>
 <Highlight language={bash} code={config_fish} />
 
+<p>
 Finally, in your container's shell config, source the corresponding shell integration script from
 the cache:
-
+</p>
 <Highlight language={bash} code={integration} />
 
+<p>
 This basically copies the host's ghostty resources folder to somewhere the container can access, and
 it just kind of works! Ghostty will now show your directory, say which command you're running, and
 understand that it can exit when you're just in the shell.
+</p>

@@ -51,7 +51,6 @@
 
 	nav.path {
 		font-style: italic;
-		font-family: var(--nhg);
 		color: var(--gray-50);
 	}
 
@@ -80,7 +79,6 @@
 
 	.metadata {
 		font-style: italic;
-		font-family: var(--nhg);
 		color: var(--gray-50);
 	}
 </style>

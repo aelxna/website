@@ -12,7 +12,7 @@ My two main interests software-wise are in graphics and systems programming. At 
 Anyways, I want this website to double as both a showcase to potential employers as well as a place for me to mess around. For any business inquiries please email <a href="mailto:business@aelena.net">business@aelena.net</a>.
 </p>
 
-<div style="text-align:center">
+<div style="text-align:center;margin-bottom:1rem;">
   <a href="https://github.com/aelxna">GitHub</a>
   {" · "}
   <a href="https://www.linkedin.com/in/elena-nelson-3a853419b/">LinkedIn</a>
