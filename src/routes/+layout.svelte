@@ -82,7 +82,8 @@
 		position: relative;
 		padding: 0;
 		margin: 0;
-		background: linear-gradient(180deg, var(--text-white), var(--page-light));
+		background-image: url("/static/images/texture.svg"), linear-gradient(180deg, var(--text-white), var(--page-light) 100vh);
+		background-attachment: fixed;
 	}
 
 	.window-container {
@@ -99,8 +100,7 @@
 		padding: 0.25rem;
 		padding-bottom: 0.5rem;
 
-		margin-left: auto;
-		margin-right: auto;
+		margin: 0.5rem auto;
 
 		max-width: 900px;
 
@@ -121,6 +121,12 @@
   	background-size: 8px 2px;
   	background-repeat: repeat-x;
 		height: 0.5rem;
+	}
+
+	@media(width <= 900px) {
+		.window-container {
+			padding: 0;
+		}
 	}
 
 </style>

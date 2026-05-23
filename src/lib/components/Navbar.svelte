@@ -63,6 +63,7 @@
 			display: flex;
 			align-items: center;
 			font-weight: bold;
+			margin-right: 0.5rem;
 		}
 
 		.logo {
