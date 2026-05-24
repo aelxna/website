@@ -100,7 +100,7 @@
 		padding: 0.25rem;
 		padding-bottom: 0.5rem;
 
-		margin: 0.5rem auto;
+		margin: 0 auto;
 
 		max-width: 900px;
 
