@@ -60,6 +60,14 @@
     }
   }
 
+	.dotted-gradient {
+  	background-image: linear-gradient(to right, var(--page-light) 25%, rgba(255, 255, 255, 0) 0%);
+  	background-position: top;
+  	background-size: 8px 2px;
+  	background-repeat: repeat-x;
+		height: 0.5rem;
+	}
+
   color: var(--text-black);
   font-size: 1rem;
 }

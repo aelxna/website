@@ -1,5 +1,6 @@
 <script>
 	import posts from '$lib/assets/posts.json';
+	import Footer from '$lib/components/Footer.svelte';
 
 	const latest = posts.length === 0 ? undefined : posts.sort((a, b) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime())[0]
 </script>
@@ -7,7 +8,7 @@
 <h1 class="pagetitle">welcome!</h1>
 
 <p>
-hi!!!!!! i'm elena, a computer scientist from minnesota. this is my website for blog posts, project showcases, and even an image gallery! i'll post about neat computer tricks, interesting projects i've worked on, and more. hope you enjoy! ^_^
+hi!!!!!! i'm elena, a computer scientist from minnesota. this is my website for blog posts, project showcases, and even an image gallery! i'll post about interesting projects i've worked on as well as some random stuff i feel like writing about. hope you enjoy! ^_^
 </p>
 
 <h2 id="most-recent">latest post</h2>
@@ -21,6 +22,8 @@ hi!!!!!! i'm elena, a computer scientist from minnesota. this is my website for 
 		<div class="metadata">Published {latest.date} · {latest.type === "blog" ? "blog" : "project"}</div>
 	</div>
 {/if}
+<div class='dotted-gradient'><br></div>
+<Footer />
 
 <style>
 	div.metadata {

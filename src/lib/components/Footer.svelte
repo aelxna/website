@@ -52,7 +52,7 @@
 			}
 
 			.commit {
-				padding-right: 0.5rem;
+				padding-right: 0rem;
 
 				a {
 					color: var(--text-black);

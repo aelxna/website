@@ -43,8 +43,6 @@
 			<div class="content">
 				{@render children()}
 			</div>
-			<div class='dotted-gradient'><br></div>
-			<Footer />
 		</div>
 	</div>
 </main>
@@ -113,14 +111,6 @@
 		padding: 0.75rem;
 		padding-bottom: 0;
 		font-family: var(--sans);
-	}
-
-	.dotted-gradient {
-  	background-image: linear-gradient(to right, var(--page-light) 25%, rgba(255, 255, 255, 0) 0%);
-  	background-position: top;
-  	background-size: 8px 2px;
-  	background-repeat: repeat-x;
-		height: 0.5rem;
 	}
 
 	@media(width <= 900px) {
