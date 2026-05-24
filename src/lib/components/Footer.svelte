@@ -11,7 +11,7 @@
       <img src="/images/no-right-turn.gif" alt="No right turn except for regular route transit buses"/>
       <img src="/images/M2_Demo_Now.jpg" alt="Marathon 2 Demo Now!"/>
       <img src="/images/gamecube.png" alt="Nintendo GameCube logo"/>
-      <img src="/images/flag-lesbian.png" alt="Lesbian flag"/>
+      <img src="/images/mn-lesbian.png" alt="Minnesota and Lesbian flags combined"/>
 			<img src="/images/debian2.gif" alt="Debian GNU/Linux Powered" />
     </div>
     <div class="commit">
